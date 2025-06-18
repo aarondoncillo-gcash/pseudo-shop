@@ -29,8 +29,7 @@ funciton create_user(name, email, password, confirm_password):
 
 # Function for loggin user in
 function login_user(email, password):
-    if search_from_db(email, password):
-        LOGIN_USER
+    return search_from_db(email, password)
 
 # Function for searching inputted credentials from db
 function search_from_db(email, password)
