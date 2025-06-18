@@ -10,6 +10,7 @@ function display_products()
 		for each product in product_list:
 			print "=========================="
 			print "Product Name: " + product.name
+			print "Price: " + product.price
 			print "Specification:"
 			print "Width: " + product.width
 			print "Height: " + product.height

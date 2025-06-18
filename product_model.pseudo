@@ -15,7 +15,7 @@
 product_list = []
 
 # Function to add new product to the list
-function add_product(name, width, height, length, weight, color, brand)
+function add_product(name, width, height, length, weight, color, brand, price)
 	# Create a new product using the given attributes input
 	new_product = {
 		name: name,
@@ -24,7 +24,8 @@ function add_product(name, width, height, length, weight, color, brand)
 		length: length,
 		weight: weight,
 		color: color,
-		brand: brand
+		brand: brand,
+		price: price
 	}
 	# Add the new product to the in-memory list
 	add new_product to product_list
@@ -47,6 +48,8 @@ function input_product_details()
 	input color
 	print "Enter product brand:"
 	input brand
+	print "Enter product price:"
+	input price
 	# Add the product to the list
-	call add_product(name, width, height, length, weight, color, brand)
+	call add_product(name, width, height, length, weight, color, brand, price)
 
