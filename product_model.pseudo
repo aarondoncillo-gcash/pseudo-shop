@@ -14,7 +14,9 @@
 # Placeholder product list
 product_list = []
 
+# Function to add new product to the list
 function add_product(name, width, height, length, weight, color, brand)
+	# Create a new product using the given attributes input
 	new_product = {
 		name: name,
 		width: width,
@@ -24,10 +26,13 @@ function add_product(name, width, height, length, weight, color, brand)
 		color: color,
 		brand: brand
 	}
+	# Add the new product to the in-memory list
 	add new_product to product_list
 	print "Product added successfully"
 
+# Function to get product info from user input and store it to the list
 function input_product_details()
+	# Ask for product info
 	print "Enter product name:"
 	input name
 	print "Enter product width:"
@@ -42,5 +47,6 @@ function input_product_details()
 	input color
 	print "Enter product brand:"
 	input brand
+	# Add the product to the list
 	call add_product(name, width, height, length, weight, color, brand)
 
