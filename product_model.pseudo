@@ -29,7 +29,6 @@ function add_product(name, width, height, length, weight, color, brand, price)
 	}
 	# Add the new product to the in-memory list
 	add new_product to product_list
-	print "Product added successfully"
 
 # Function to get product info from user input and store it to the list
 function input_product_details()
@@ -52,4 +51,5 @@ function input_product_details()
 	input price
 	# Add the product to the list
 	call add_product(name, width, height, length, weight, color, brand, price)
+	print "Product added successfully"
 
