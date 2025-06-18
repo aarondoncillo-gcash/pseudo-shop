@@ -6,6 +6,10 @@
 # Run the app
 print "Welcome to the Pseudo Shop!"
 
+# Add initial data to product list
+call add_product("Sample Product 1", 10, 5, 20, 1.5, red, generic, 100)
+call add_product("MacBook Pro", 12.31, 0.61, 8.71, 1.62, silver, Apple, 113034)
+
 # Display initial list of products available
 print "-----------------------------------------"
 call display_products()
