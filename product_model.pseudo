@@ -66,7 +66,6 @@ def filter_products(
 ):
     filtered = []
 
-<<<<<<< HEAD
     for product in product_list:
         if name and name.lower() not in product['name'].lower():
             continue
@@ -95,7 +94,6 @@ def filter_products(
 
     # This will return all criteria that it matches with
     return filtered
-=======
 # Function to add new product to the list
 function add_product(name, width, height, length, weight, color, brand, price)
 	# Create a new product using the given attributes input
@@ -135,4 +133,3 @@ function input_product_details()
 	call add_product(name, width, height, length, weight, color, brand, price)
 	print "Product added successfully"
 
->>>>>>> 5bff74c9fca8ff72fa105658a7dd24f5642cf19a
