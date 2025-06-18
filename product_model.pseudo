@@ -14,3 +14,33 @@
 # Placeholder product list
 product_list = []
 
+function add_product(name, width, height, length, weight, color, brand)
+	new_product = {
+		name: name,
+		width: width,
+		height: height,
+		length: length,
+		weight: weight,
+		color: color,
+		brand: brand
+	}
+	add new_product to product_list
+	print "Product added successfully"
+
+function input_product_details()
+	print "Enter product name:"
+	input name
+	print "Enter product width:"
+	input width
+	print "Enter product height:"
+	input height
+	print "Enter product length:"
+	input length
+	print "Enter product weight:"
+	input weight
+	print "Enter product color:"
+	input color
+	print "Enter product brand:"
+	input brand
+	call add_product(name, width, height, length, weight, color, brand)
+
