@@ -1,6 +1,31 @@
 # Handles user signup and login
+data class RegisterUserModel (
+    String name,
+    String email,
+    String password,
+    String confirm_password
+)
 
-# Placeholder function signatures:
-# function create_user(name, email, password)
+# Function to validate whether the inputted password matches with the inputted confirm password
+function validate_password(var password, var confirm_password):
+    return password == confirm_password
+
+# Function for storing user information to db
+function store_to_db(inputted_credentials):
+    STORE_CREDENTIALS_TO_DB(credentials)
+
+funciton create_user(name, email, password, confirm_password):
+    # Validating input
+    if validate_password(password, confirm_password):
+        val inputted_credentials = RegisterUserModel(
+            name,
+            email,
+            password
+        )
+
+        # Storing information
+        store_to_db(inputted_cedentials)
+
+
 # function login_user(email, password)
 
