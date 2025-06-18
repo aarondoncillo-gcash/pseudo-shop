@@ -6,11 +6,14 @@
 # Run the app
 print "Welcome to the Pseudo Shop!"
 
+# Display initial list of products available
 print "-----------------------------------------"
 call display_products()
 print "-----------------------------------------"
 
+# Begin the main menu loop
 repeat:
+	# Available menu options
 	print "-----------------------------------------"
 	print "1 - View all products"
 	print "2 - Add new product"
@@ -18,18 +21,22 @@ repeat:
 	print "4 - Exit"
 	print "-----------------------------------------"
 
+	# Get user's choice
 	print "Please select a choice [1 to 4]: "
 	input choice
 
+	# Handles user's input and call the appropriate function to perform the selected action
 	if choice is 1
 		call display_products()
 	else if choice is 2
-		call add_product()
+		call input_product_details()
 	else if choice is 3
 		call create_user()
 	else if choice is 4
+		# Exit the loop and end the program
 		end loop
 	else
+		# Handle invalid input
 		print "Invalid choice"
 
 
