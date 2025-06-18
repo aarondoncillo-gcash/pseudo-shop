@@ -1,16 +1,5 @@
 # Handles product data
 
-# Sample structure:
-# product = {
-#     name: "Sample Product",
-#     width: 10,
-#     height: 5,
-#     length: 20,
-#     weight: 1.5,
-#     color: "red",
-#     brand: "Generic"
-# }
-
 # Placeholder product list
 product_list = [
     {
@@ -60,4 +49,46 @@ product_list = [
     }
 ]
 
+def filter_products(
+    product_list,
+    name = None,
+    color = None,
+    brand = None,
+    min_width = None,
+    max_width = None,
+    min_height = None,
+    max_height = None,
+    min_length = None,
+    max_length = None,
+    min_weight = None,
+    max_weight = None
+):
+    filtered = []
 
+    for product in product_list:
+        if name and name.lower() not in product['name'].lower():
+            continue
+        if color and product['color'].lower() != color.lower():
+            continue
+        if brand and product['brand'].lower() != brand.lower():
+            continue
+        if min_width and product['width'] < min_width:
+            continue
+        if max_width and product['width'] > max_width:
+            continue
+        if min_height and product['height'] < min_height:
+            continue
+        if max_height and product['height'] > max_height:
+            continue
+        if min_length and product['length'] < min_length:
+            continue
+        if max_length and product['length'] > max_length:
+            continue
+        if min_weight and product['weight'] < min_weight:
+            continue
+        if max_weight and product['weight'] > max_weight:
+            continue
+
+        filtered.append(product)
+
+    return filtered
