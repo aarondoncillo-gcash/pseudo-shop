@@ -12,5 +12,52 @@
 # }
 
 # Placeholder product list
-product_list = []
+product_list = [
+    {
+        "name": "Bluetooth Speaker",
+        "width": 7.5,
+        "height": 6.0,
+        "length": 15.0,
+        "weight": 0.9,
+        "color": "black",
+        "brand": "SoundMax"
+    },
+    {
+        "name": "Laptop Stand",
+        "width": 24.0,
+        "height": 5.0,
+        "length": 30.0,
+        "weight": 1.2,
+        "color": "silver",
+        "brand": "ErgoLift"
+    },
+    {
+        "name": "Electric Toothbrush",
+        "width": 3.0,
+        "height": 25.0,
+        "length": 3.0,
+        "weight": 0.3,
+        "color": "white",
+        "brand": "SmileBright"
+    },
+    {
+        "name": "Travel Mug",
+        "width": 8.0,
+        "height": 18.0,
+        "length": 8.0,
+        "weight": 0.4,
+        "color": "blue",
+        "brand": "ThermoGo"
+    },
+    {
+        "name": "Portable Hard Drive",
+        "width": 7.0,
+        "height": 1.5,
+        "length": 11.0,
+        "weight": 0.2,
+        "color": "grey",
+        "brand": "DataVault"
+    }
+]
+
 
