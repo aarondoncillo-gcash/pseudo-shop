@@ -15,17 +15,26 @@ class RegisterUser {
         input password
         input confirm_password
 
+        # Validating input
         if validate_password(password, confirm_password):
-            store_user_info(
+            val inputted_credentials = RegisterUserModel(
                 first_name,
                 last_name,
                 email,
                 password
             )
 
+            # Storing information
+            store_to_db(inputted_cedentials)
+
+
     # Function to validate whether the inputted password matches with the inputted confirm password
     function validate_password(var password, var confirm_password):
         return password == confirm_password
+
+    # Function for storing user information to db
+    function store_to_db(inputted_credentials):
+        STORE_CREDENTIALS_TO_DB(credentials)
 
     # Function for calling all defined functions
     funciton main():
