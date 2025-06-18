@@ -1,12 +1,33 @@
 # Format for user input
 data class RegisterUserModel (
-    String firstName,
-    String lastName,
+    String first_name,
+    String last_name,
     String email,
     String password
 )
 
 class RegisterUser {
- 
+    # Function for getting user information
+    funciton get_user_credentials:
+        input first_name
+        input last_name
+        input email
+        input password
+        input confirm_password
 
+        if validate_password(password, confirm_password):
+            store_user_info(
+                first_name,
+                last_name,
+                email,
+                password
+            )
+
+    # Function to validate whether the inputted password matches with the inputted confirm password
+    function validate_password(var password, var confirm_password):
+        return password == confirm_password
+
+    # Function for calling all defined functions
+    funciton main():
+        get_user_credentials()
 }
