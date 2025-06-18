@@ -6,3 +6,74 @@
 # Run the app
 print "Welcome to the Pseudo Shop!"
 
+# Add initial data to product list
+call add_product("Sample Product 1", 10, 5, 20, 1.5, red, generic, 100)
+call add_product("MacBook Pro", 12.31, 0.61, 8.71, 1.62, silver, Apple, 113034)
+
+# Choose to login as user or continue as guest
+print "Do you want to login or continue as guest? [Y - login or  N- guest]"
+input user_choice
+
+if choice is Y
+	#Enter credentials and break loop if login successfully
+	repeat : 
+		print "Enter email"
+		input email
+		print "Enter password"
+		input password
+		if call login_user(email, password) is true
+			print "Hello" + email
+			end loop
+else
+	print "Hello Guest"
+
+# Display initial list of products available
+print "-----------------------------------------"
+call display_products()
+print "-----------------------------------------"
+
+# Begin the main menu loop
+repeat:
+	# Available menu options
+	print "-----------------------------------------"
+	print "1 - View all products"
+	print "2 - Add new product"
+	print "3 - Create new user"
+	print "4 - Exit"
+	print "-----------------------------------------"
+
+	# Get user's choice
+	print "Please select a choice [1 to 4]: "
+	input choice
+
+	# Handles user's input and call the appropriate function to perform the selected action
+	if choice is 1
+		call display_products()
+	else if choice is 2
+		print "Creating a new product"
+		call input_product_details()
+	else if choice is 3
+		print "Creating a new user"
+		print "Enter name: "
+		input name
+		print "Enter email: "
+		input email
+		print "Enter password: "
+		input password
+		print "Re-enter password: "
+		input confirm_password
+		call create_user(name, email, password, confirm_password)
+	else if choice is 4
+		# Exit the loop and end the program
+		end loop
+	else
+		# Handle invalid input
+		print "Invalid choice"
+
+
+print "Thank you for using Pseudo Shop!"
+
+
+
+
+
