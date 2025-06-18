@@ -1,0 +1,12 @@
+# Format for user input
+data class RegisterUserModel (
+    String firstName,
+    String lastName,
+    String email,
+    String password
+)
+
+class RegisterUser {
+ 
+
+}
